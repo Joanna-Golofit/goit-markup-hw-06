@@ -174,8 +174,6 @@ img {
 /* ======= END MENU NAVIGATION ======= */
 /* ======= HERO  ======= */
 
-/* .data-modal-open {
-} */
 
 .background-hero {
   background-image: linear-gradient(    
@@ -429,7 +427,8 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
-  align-items: baseline;  
+  align-items: baseline; 
+  justify-content: space-between;
 }
 
 .addresses {
@@ -501,6 +500,50 @@ img {
   color: var(--white-color);
 }
 
+/*  newsletter  */
+
+.newsletter {
+  margin-left: 70px;
+}
+
+.newsletter-label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.newsletter div {
+  display: flex;
+}
+
+.newsletter-button {
+  width: 200px;
+  height: 50px;
+  background: var(--blue-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-sizing: border-box;
+  align-self: flex-end;
+  ;
+}
+
+.newsletter-email-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 0 0 0 16px;
+}
+
+/*  END newsletter  */
+
 /* ======= END CONTACT ======= */
 /* =======  Backdrop  ======= */
 
@@ -518,9 +561,7 @@ img {
 }
 
 .is-hidden {
-  /* opacity: 0.5; */
   visibility: hidden;
-  /* transform: scale(0.95); */
   opacity: 0;
   pointer-events: none;
 }
@@ -537,6 +578,7 @@ img {
   transform: translate(-50%,-50%);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px 40px;
 }
 
 .x-btn {
@@ -551,31 +593,48 @@ img {
   cursor: pointer;
 }
 
-
-
-/* @keyframes windowPop {
-  0% {
-    transform: scale(0.4);
-    opacity: 0.4;
-  }
-  80% {
-    transform: scale(0.7);
-    opacity: 0.7;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+.modal-header {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
-.windowPop {
-  animation-duration: 1000ms;
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-  animation-delay: 500ms;
-  animation-name: windowPop;
+/* forms */
+
+.modal-form textarea {
+  padding: 12px 16px;
+}
+
+/* .modal-form {  
+  display: flex;
+  flex-direction: column;
 } */
+
+.modal-form input,
+.modal-form textarea {
+  width: 448px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  /* box-sizing: border-box; */
+  border-radius: 4px;
+}
+
+.modal-form input {
+  height: 40px;  
+}
+
+.modal-form textarea {
+  height: 120px;
+}
+
+.modal-form label {
+  /* position: relative;
+  top: 10px;
+  left: 20px; */
+}
+
+/* END forms */
 
 /* =======  END Backdrop  ======= */
 

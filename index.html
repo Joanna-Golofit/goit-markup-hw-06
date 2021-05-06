@@ -468,7 +468,29 @@
               </ul>
               <!-- END social-icons -->
         </div>
-      </div>  
+
+        <!-- newsletter -->
+
+        <div class="newsletter">
+          <form class="newsletter-form">
+            <label class="newsletter-label white">
+            <!-- <label for="newsletter-email-input" class="newsletter-label white"></label> -->
+              Zapisz się do newslettera
+            <div>
+              <input id="newsletter-email-input" class="newsletter-email-input" type="email" name="email" placeholder="E-mail" />
+            </label>
+              <button class="newsletter-button" type="submit">
+                <svg width="130" height="30">
+                  <use href="./images/icons.svg#icon-send-with-text"></use>            
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- END newsletter -->
+      
+        </div>  
     </footer>
     <!-- END CONTACT -->
 
@@ -479,7 +501,40 @@
           <svg class="x-icon" width="11" height="11">
             <use href="./images/icons.svg#icon-x"></use>            
           </svg>          
-        </button>         
+        </button> 
+
+        <!-- forms -->
+        
+        <p class="modal-header">Zostaw swoje dane w formularzu poniżej</p>
+
+        <form class="modal-form">
+          <label>
+            Imie
+            <input name="name" />
+          </label>
+          <label>
+            Telefon
+            <input type="tel" name="tel" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" />
+          </label>
+          <label>
+            Komentarz
+            <textarea name="comment" placeholder="Wprowadź tekst"></textarea>
+          </label>
+          <!-- <p>           -->
+          <label>
+            <input type="checkbox" />
+            <span>Oświadczam iż akceptuję Regulamin i Politykę Prywatności.</span>
+          </label>
+          <!-- </p> -->
+
+          <button type="submit">Wyślij</button>
+        </form>
+        <!-- END forms -->
+
       </div>
     </div>
     <!-- END Backdrop  -->
