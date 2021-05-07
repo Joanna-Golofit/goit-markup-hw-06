@@ -503,29 +503,32 @@
           </svg>          
         </button> 
 
-        <!-- forms -->
+        <!-- form -->
         
         <p class="modal-header">Zostaw swoje dane w formularzu poniżej</p>
 
         <form class="modal-form">
-          <label>
+          <label class="label">
             Imie
-            <input name="name" />
+            <input class="name" name="name" />
+            <!-- <svg class="a">
+             <use href="./images/icons.svg#icon-person"></use>            
+            </svg>  -->            
           </label>
-          <label>
+          <label class="label">
             Telefon
-            <input type="tel" name="tel" />
+            <input class="tel" type="tel" name="tel" />
           </label>
-          <label>
+          <label class="label">
             Email
-            <input type="email" name="email" />
+            <input class="email" type="email" name="email" />
           </label>
-          <label>
+          <label class="label">
             Komentarz
-            <textarea name="comment" placeholder="Wprowadź tekst"></textarea>
+            <textarea class="comment" name="comment" placeholder="Wprowadź tekst"></textarea>
           </label>
           <!-- <p>           -->
-          <label>
+          <label class="label">
             <input class="checkbox" type="checkbox" required />
             <span class="declaration">Oświadczam iż akceptuję <a class="documents" href="#">Regulamin</a> i <a class="documents" href="#">Politykę Prywatności</a>.</span>
           </label>
@@ -534,7 +537,7 @@
           <button class="btn" type="submit">Wyślij</button>
           
         </form>
-        <!-- END forms -->
+        <!-- END form -->
           
       </div>
     </div>
