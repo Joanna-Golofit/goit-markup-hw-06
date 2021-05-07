@@ -5,6 +5,7 @@
   --white-color: #ffffff;
   --blue-color: #2196f3;
   --gray-color: #757575;
+  --light-gray-color: rgba(117, 117, 117, 0.5);
   --background-color-dark: #2f303a;
   --background-color-gray: #f5f4fa;
   --opacity-color: rgba(255, 255, 255, 0.6);
@@ -202,19 +203,15 @@ img {
   margin-top: 200px;
 }
 
-.order-btn {
+.btn {
   border: 0;
   width: 200px;
+  height: 50px;
   background: #2196F3;
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 30px;
-  margin-bottom: 200px;
 
   background-color: var(--blue-color);
   color: var(--white-color);
-  font-family: var(--main-font);
+  /* font-family: var(--main-font); */
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -223,6 +220,13 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+}
+
+.background-hero .btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 200px;
 }
 
 /* ======= HERO  ======= */
@@ -518,15 +522,14 @@ img {
   display: flex;
 }
 
-.newsletter-button {
-  width: 200px;
-  height: 50px;
-  background: var(--blue-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  box-sizing: border-box;
+
+.newsletter .btn {
   align-self: flex-end;
-  ;
+  display: flex;
+}
+
+.newsletter svg {
+  margin: auto
 }
 
 .newsletter-email-input {
@@ -594,11 +597,13 @@ img {
 }
 
 .modal-header {
-  font-weight: bold;
+  display: block;
+  font-weight: 700;
   font-size: 20px;
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 12px;
 }
 
 /* forms */
@@ -607,17 +612,36 @@ img {
   padding: 12px 16px;
 }
 
+.modal-form label,
+.modal-form textarea {
+  font-size: 12px;
+line-height: 1.167;
+letter-spacing: 0.01em;
+
+}
+
+.modal-form label {
+color: var(--gray-color);
+}
+
+.modal-form textarea[placeholder]{
+  color: red;
+/* color: var(--light-gray-color); */
+}
+
 /* .modal-form {  
   display: flex;
   flex-direction: column;
 } */
 
-.modal-form input,
+.modal-form input:not([type="checkbox"]),
 .modal-form textarea {
   width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   /* box-sizing: border-box; */
   border-radius: 4px;
+  margin-bottom: 10px;
+  margin-top: 4px;
 }
 
 .modal-form input {
@@ -626,6 +650,7 @@ img {
 
 .modal-form textarea {
   height: 120px;
+  resize: none;
 }
 
 .modal-form label {
