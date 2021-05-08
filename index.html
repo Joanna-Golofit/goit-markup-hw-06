@@ -507,17 +507,17 @@
         
         <p class="modal-header">Zostaw swoje dane w formularzu poniżej</p>
 
-        <form class="modal-form">
+        <form method="post" class="modal-form">
           <label class="label">               
             Imie               
-            <input class="modal-input" name="name" required /> 
+            <input class="modal-input" name="name" minlength="3" required /> 
             <svg class="form-icon">
              <use href="./images/icons.svg#person"></use>            
             </svg>                  
           </label>
           <label class="label">
             Telefon             
-            <input class="modal-input" type="tel" name="tel" required />
+            <input class="modal-input" type="tel" name="tel" minlength="7" required />
             <svg class="form-icon">
              <use href="./images/icons.svg#phone"></use>            
             </svg>
@@ -535,8 +535,8 @@
           </label>
           <div class="checkbox-wrapper">          
             <label class="label">
-              <input class="checkbox" type="checkbox" required />
-              <span class="declaration">Oświadczam iż akceptuję <a class="documents" href="#">Regulamin</a> i <a class="documents" href="#">Politykę Prywatności</a>.</span>
+              <input class="checkbox visually-hidden" type="checkbox" required />
+              <span class="declaration">Oświadczam iż akceptuję <a class="policy" href="#">Regulamin</a> i <a class="policy" href="#">Politykę Prywatności</a>.</span>
             </label>
           </div>
    
