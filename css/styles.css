@@ -644,18 +644,40 @@ input {
   color: var(--gray-color);
 }
 
-.label:focus input:not([type="checkbox"]),
-.label:hover input:not([type="checkbox"]),
-.label:focus .comment,
-.label:hover .comment {
-  border: 1px solid #2196F3;
-  
+.form-icon {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 45%;
+  left: 14px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.label:hover + .form-icon,
-.label:focus-within + .form-icon {
-  color: var(--blue-color);
-  fill: currentColor;
+/* .form-icon:focus,          juz nie potrzeba bo dziala z +
+.form-icon:hover {
+  fill: var(--blue-color);
+} */
+
+/* , 
+.comment:hover,                   sam focus nie dziala...
+.modal-input:hover
+.comment:focus,
+.modal-input:focus
+.label:focus .comment,
+.label:focus .modal-input {
+,
+.label:hover .comment,
+.label:hover .modal-input,*/
+
+.label .comment:focus,
+.label .modal-input:focus {
+  border-color: var(--blue-color);
+}
+
+/* .modal-input:hover + .form-icon, */
+.modal-input:focus + .form-icon {
+  fill: var(--blue-color);
 }
 
 .modal-form .btn {  
@@ -664,28 +686,19 @@ input {
   margin-top: 30px;
 }
 
-.form-icon {
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  top: 65%;
-  left: 12px;
-  /* transform: translateY(-50%); */
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-form input:not([type="checkbox"]),
+.modal-form .modal-input,
 .modal-form .comment {
   width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  /* box-sizing: border-box; */
   border-radius: 4px;  
   margin-top: 4px;
   outline: none;
   padding-left: 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form input:not([type="checkbox"]) {
+.modal-form .modal-input {
   height: 40px;  
   margin-bottom: 10px;  
 }
@@ -699,6 +712,12 @@ input {
 
 .comment::placeholder {
   color: var(--light-gray-color);
+}
+
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* END form */
