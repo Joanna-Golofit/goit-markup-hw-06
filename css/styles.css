@@ -551,6 +551,7 @@ input {
   border-radius: 4px;
   background-color: transparent;
   padding: 0 0 0 16px;
+  outline: none;
 }
 
 /*  END newsletter  */
@@ -618,8 +619,8 @@ input {
 
 .checkbox {
   vertical-align: middle;
-  /* position: relative; */
-  /* bottom: 1px; */
+  position: relative;
+  bottom: 1px;
   border-color: var(--main-color);
   margin-right: 8px;
 }
@@ -648,7 +649,7 @@ input {
 .label:focus .comment,
 .label:hover .comment {
   border: 1px solid #2196F3;
-  outline: none;
+  
 }
 
 .label:hover + .form-icon,
@@ -680,6 +681,8 @@ input {
   /* box-sizing: border-box; */
   border-radius: 4px;  
   margin-top: 4px;
+  outline: none;
+  padding-left: 42px;
 }
 
 .modal-form input:not([type="checkbox"]) {
@@ -694,6 +697,9 @@ input {
   margin-bottom: 25px;
 }
 
+.comment::placeholder {
+  color: var(--light-gray-color);
+}
 
 /* END form */
 
